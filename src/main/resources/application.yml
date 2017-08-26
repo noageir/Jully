@@ -1,0 +1,37 @@
+#服务端口
+server:
+    port: 9090
+    context-path: /
+
+#Spring Boot设置
+spring:
+
+    #Aop
+    aop:
+        auto: true
+        proxy-target-class: false
+
+    #DataBase
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://rm-uf6bj718e7v3e84gro.mysql.rds.aliyuncs.com:3306/july?characterEncoding=utf8&useSSL=true
+        username: root
+        password: 179513QwE@
+        type: com.alibaba.druid.pool.DruidDataSource
+        initialSize: 1
+        minIdle: 1
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 1800000
+        validationQuery: SELECT 'X'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        filters: stat,wall
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+#配置Mybatis
+mybatis:
+    config-location: classpath:mybatis-config.xml
+    mapper-locations: classpath:mapper/*Mapper.xml
