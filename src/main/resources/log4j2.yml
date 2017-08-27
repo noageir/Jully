@@ -11,7 +11,7 @@ Configuration:
       - name: log.level
         value: trace
       - name: log.path
-        value: /logs
+        value: /opt/logs
       - name: project.name
         value: my-spring-boot
 
