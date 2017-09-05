@@ -5,7 +5,6 @@ import com.july.springboot.model.form.UserAddForm;
 import com.july.springboot.model.form.UserQueryForm;
 import com.july.springboot.model.json.UserJson;
 import com.july.springboot.service.UserService;
-import com.july.springboot.util.PasswordUtil;
 import com.july.springboot.util.back.ReturnJson;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
